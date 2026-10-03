@@ -14,7 +14,7 @@ except ImportError:
 def test_calculo_frete_padrao():
     """
     Testa se o valor total é calculado adicionando a taxa de frete padrão
-    para subtotais abaixo de R$ 200,00.
+    para subtotais abaixo de R$ 250,00.
     """
     # [RB-01] THE SYSTEM SHALL calcular o valor total adicionando a taxa de frete padrão de R$ 15,00 ao subtotal do carrinho.
     subtotal = 100.00
@@ -27,11 +27,11 @@ def test_calculo_frete_padrao():
 
 def test_calculo_frete_gratis_limite_exato():
     """
-    Testa se o frete é zerado quando o subtotal atinge exatamente R$ 200,00.
+    Testa se o frete é zerado quando o subtotal atinge exatamente R$ 250,00.
     """
-    # [RB-02] IF o subtotal do carrinho for maior ou igual a R$ 200,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
-    subtotal = 200.00
-    esperado = 200.00
+    # [RB-02] IF o subtotal do carrinho for maior ou igual a R$ 250,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
+    subtotal = 250.00
+    esperado = 250.00
 
     resultado = calcular_total(subtotal)
 
@@ -40,11 +40,11 @@ def test_calculo_frete_gratis_limite_exato():
 
 def test_calculo_frete_gratis_acima_do_limite():
     """
-    Testa se o frete é zerado quando o subtotal ultrapassa R$ 200,00.
+    Testa se o frete é zerado quando o subtotal ultrapassa R$ 250,00.
     """
-    # [RB-02] IF o subtotal do carrinho for maior ou igual a R$ 200,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
-    subtotal = 250.00
-    esperado = 250.00
+    # [RB-02] IF o subtotal do carrinho for maior ou igual a R$ 250,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
+    subtotal = 300.00
+    esperado = 300.00
 
     resultado = calcular_total(subtotal)
 

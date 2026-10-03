@@ -7,5 +7,5 @@
 
 ## Regras de Negócio e Exceções
 * **RB-01 (Ubiquitous)**: THE SYSTEM SHALL calcular o valor total adicionando a taxa de frete padrão de R$ 15,00 ao subtotal do carrinho.
-* **RB-02 (Unwanted Behavior)**: IF o subtotal do carrinho for maior ou igual a R$ 200,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
+* **RB-02 (Unwanted Behavior)**: IF o subtotal do carrinho for maior ou igual a R$ 250,00, THEN THE SYSTEM SHALL conceder frete grátis (taxa = R$ 0,00).
 * **RB-03 (Unwanted Behavior):** IF valor <= 0, THEN exibir erro 'Valor de carrinho inválido'.
